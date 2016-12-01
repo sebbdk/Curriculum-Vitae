@@ -1,16 +1,9 @@
-@import "bootstrap.min.css";
+@import "./bootstrap.min";
+@import "./bootstrap-glyphicons";
 
 
 html, body {
 	background: #222;
-}
-
-.rounded-corners (@radius: 5px) {
-  -webkit-border-radius: @radius;
-  -moz-border-radius: @radius;
-  -ms-border-radius: @radius;
-  -o-border-radius: @radius;
-  border-radius: @radius;
 }
 
 .container {
@@ -79,7 +72,7 @@ html, body {
 							padding-left: 5px;
 							padding-right: 5px;
 
-							.rounded-corners();
+							border-radius: 5px;
 						}
 					}
 
@@ -93,7 +86,7 @@ html, body {
 							text-align: center;
 							display: block;
 
-							.rounded-corners();
+							border-radius: 5px;
 						}
 					}
 				}

@@ -1,4 +1,4 @@
 Curriculum-Vitae
 ================
 
-My Curriculum Vitae or resume
+My Curriculum Vitae or resumé if you like.
