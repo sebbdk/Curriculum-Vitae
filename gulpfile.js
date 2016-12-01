@@ -13,7 +13,7 @@ const cssmin = require('gulp-cssmin');
 
 const Config = {
   dirs:{
-    dev:'./dev',
+    dev:'./',
     src:'./src',
     dist:'./dist',
   }
