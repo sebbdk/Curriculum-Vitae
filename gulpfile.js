@@ -31,7 +31,10 @@ gulp.task('default', [
 
 gulp.task('watch', function() {
   gulp.watch(['./src/**/*.js', './src/**/*.html'], ['scripts'])
-  gulp.watch('./src/index.html', ['html'])
+  gulp.watch([
+    './src/index.html',
+    './src/projects.html',
+  ], ['html'])
   gulp.watch(['./src/**/*.scss'], ['sass']);
 });
 
@@ -66,7 +69,7 @@ gulp.task('sass', function () {
 });
 
 gulp.task('html', function() {
-  return gulp.src('./src/index.html')
+  return gulp.src(['./src/index.html', './src/projects.html'])
     .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest(Config.dirs.dev))
     .pipe(connect.reload());
