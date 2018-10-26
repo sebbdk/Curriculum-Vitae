@@ -29832,7 +29832,7 @@ __webpack_require__.r(__webpack_exports__);
 * @Author: Kasper Sebb' brandt
 * @Date:   2018-10-24 20:31:59
 * @Last Modified by:   Kasper Sebb' brandt
-* @Last Modified time: 2018-10-26 23:34:28
+* @Last Modified time: 2018-10-26 23:52:01
 *
 * Server side render entry
 */
@@ -29844,7 +29844,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 if (typeof global.document !== 'undefined') {
-  react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.hydrate(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_router_test_js__WEBPACK_IMPORTED_MODULE_4__["default"], null), document.getElementById('root'));
+  var path = window.location.pathname + window.location.search;
+  react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.hydrate(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_router_test_js__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    path: path,
+    isBrowser: true
+  }), document.getElementById('root'));
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (function (locals, callback) {
@@ -29889,10 +29893,9 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 * @Author: Kasper Sebb' brandt
 * @Date:   2018-10-23 19:54:04
 * @Last Modified by:   Kasper Sebb' brandt
-* @Last Modified time: 2018-10-26 23:28:39
+* @Last Modified time: 2018-10-26 23:45:58
 */
 
-console.log('included?!?!?');
 var Home =
 /*#__PURE__*/
 function (_Component) {
@@ -29904,6 +29907,9 @@ function (_Component) {
     _classCallCheck(this, Home);
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(Home).call(this, props));
+    _this.state = {
+      greeting: 'Hello there!!!'
+    };
     console.log('Instantiate home!!');
     return _this;
   }
@@ -29911,14 +29917,22 @@ function (_Component) {
   _createClass(Home, [{
     key: "componentDidMount",
     value: function componentDidMount() {
+      var _this2 = this;
+
       console.log('Mount home!!');
+      setTimeout(function () {
+        _this2.setState({
+          greeting: 'Welcome to this site!!'
+        });
+      }, 2000);
     }
   }, {
     key: "render",
     value: function render() {
+      console.log('render home!');
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "vt-home"
-      }, "This is the home page!!");
+      }, "This is the home page!!", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), this.state.greeting);
     }
   }]);
 
@@ -29962,7 +29976,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 * @Author: Kasper Sebb' brandt
 * @Date:   2018-10-23 19:54:04
 * @Last Modified by:   Kasper Sebb' brandt
-* @Last Modified time: 2018-10-26 23:23:50
+* @Last Modified time: 2018-10-26 23:42:43
 */
 
 var Index =
@@ -29984,6 +29998,7 @@ function (_Component) {
   }, {
     key: "render",
     value: function render() {
+      console.log('render index!');
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "vt-index"
       }, "this is the index page!");
@@ -30015,7 +30030,7 @@ __webpack_require__.r(__webpack_exports__);
 * @Author: Kasper Sebb' brandt
 * @Date:   2018-10-26 20:02:56
 * @Last Modified by:   Kasper Sebb' brandt
-* @Last Modified time: 2018-10-26 23:34:01
+* @Last Modified time: 2018-10-26 23:53:01
 */
 
 
@@ -30023,22 +30038,28 @@ __webpack_require__.r(__webpack_exports__);
 
 function RouterTest(props) {
   var paths = ["/", "/home"];
-  var initialPath = paths.indexOf(props.path);
+  var path = props.path.replace(/\/$/, '');
+  var initialPath = paths.indexOf(path);
   initialPath = initialPath < 0 ? 0 : initialPath;
-  console.log('initializing router');
-  console.log(initialPath);
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["MemoryRouter"], {
-    initialEntries: ["/", "/home"],
-    initialIndex: initialPath
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+  var routerContent = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "/"
+  }, "index"), " | ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "/home"
+  }, "home")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     exact: true,
     path: "/",
     component: _m_pages_index_js__WEBPACK_IMPORTED_MODULE_3__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
-    exact: true,
     path: "/home",
     component: _m_pages_home_js__WEBPACK_IMPORTED_MODULE_2__["default"]
-  })));
+  }));
+  var memRouter = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["MemoryRouter"], {
+    initialEntries: ["/", "/home"],
+    initialIndex: initialPath
+  }, routerContent);
+  var browserRouter = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["BrowserRouter"], null, routerContent);
+  var router = props.isBrowser ? browserRouter : memRouter;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, router);
 }
 
 /***/ }),

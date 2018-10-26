@@ -2,30 +2,49 @@
 * @Author: Kasper Sebb' brandt
 * @Date:   2018-10-26 20:02:56
 * @Last Modified by:   Kasper Sebb' brandt
-* @Last Modified time: 2018-10-26 23:34:01
+* @Last Modified time: 2018-10-26 23:53:01
 */
 import React from 'react'
-import { MemoryRouter, BrowserRouter, Route } from 'react-router-dom';
+import { MemoryRouter, BrowserRouter, Route, Link } from 'react-router-dom';
 
 import Home from './m/pages/home.js'
 import Index from './m/pages/index.js'
 
 export default function RouterTest(props) {
   const paths = ["/", "/home"];
-  let initialPath = paths.indexOf(props.path);
+  const path = props.path.replace(/\/$/, '');
+  let initialPath = paths.indexOf(path);
   initialPath = initialPath < 0 ? 0 : initialPath;
 
-  console.log('initializing router')
-  console.log(initialPath)
+  const routerContent = (
+    <div>
+      <div>
+        <Link to="/">index</Link> | <Link to="/home">home</Link>
+      </div>
+      <Route exact path="/" component={Index} />
+      <Route path="/home" component={Home} />
+    </div>
+  );
 
-  return (
+  const memRouter = (
     <MemoryRouter
       initialEntries={["/", "/home"]}
       initialIndex={initialPath}>
-      <div>
-        <Route exact path="/" component={Index} />
-        <Route exact path="/home" component={Home} />
-      </div>
+      {routerContent}
     </MemoryRouter>
-  )
+  );
+
+  const browserRouter = (
+    <BrowserRouter>
+      {routerContent}
+    </BrowserRouter>
+  );
+
+  const router = props.isBrowser ? browserRouter : memRouter;
+
+  return (
+    <div>
+      {router}
+    </div>
+  );
 }

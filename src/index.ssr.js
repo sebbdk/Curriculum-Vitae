@@ -2,7 +2,7 @@
 * @Author: Kasper Sebb' brandt
 * @Date:   2018-10-24 20:31:59
 * @Last Modified by:   Kasper Sebb' brandt
-* @Last Modified time: 2018-10-26 23:34:28
+* @Last Modified time: 2018-10-26 23:52:01
 *
 * Server side render entry
 */
@@ -15,7 +15,8 @@ import MyRouter from './router.test.js';
 import { Template } from './template.js';
 
 if (typeof global.document !== 'undefined') {
-  ReactDOM.hydrate(<MyRouter />, document.getElementById('root'))
+  const path = window.location.pathname+window.location.search;
+  ReactDOM.hydrate(<MyRouter path={path} isBrowser={true}/>, document.getElementById('root'))
 }
 
 export default (locals, callback) => {
