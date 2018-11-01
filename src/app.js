@@ -1,59 +1,53 @@
 /*
 * @Author: Kasper Sebb' brandt
-* @Date:   2018-10-23 19:51:01
+* @Date:   2018-10-26 20:02:56
 * @Last Modified by:   Kasper Sebb' brandt
-* @Last Modified time: 2018-10-26 00:20:52
+* @Last Modified time: 2018-11-01 21:13:20
 */
-import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import React from 'react'
+import { MemoryRouter, BrowserRouter, Route, Link } from 'react-router-dom';
 
 import Home from './m/pages/home.js'
 import Index from './m/pages/index.js'
 
-import './app.css';
-
-export class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      assets: {
-        a: 'well cake is good',
-        b: 'i really like caffeine',
-        c: 'wonderchicken'
-      },
-      time: '0'
-    };
+export default function App(props) {
+  let initialPath = '';
+  if (props.path) {
+    const paths = ["/", "/home"];
+    const path = props.path.replace(/\/$/, '');
+    initialPath = paths.indexOf(path);
+    initialPath = initialPath < 0 ? 0 : initialPath;
   }
 
-  componentDidMount() {
-    setInterval(() => {
-      this.setState({
-        time: (new Date()).getTime()
-      });
-    }, 100);
-  }
-
-  render() {
-    const assets = Object
-      .values(this.state.assets)
-      .map((value, index) => <li key={index}>{value}</li>, '');
-
-    return (
-      <div className="app">
-        <div>
-          <a href="/">/</a> | <a href="home">home</a>
-        </div>
-
-        <Router>
-          <div>
-            <Route path="/" component={Index} />
-            <Route path="/home" component={Home} />
-          </div>
-        </Router>
-        <ul>
-          {assets}
-        </ul>
+  const routerContent = (
+    <div>
+      <div>
+        <Link to="/">index</Link> | <Link to="/home">home</Link>
       </div>
-    );
-  }
+      <Route exact path="/" component={Index} />
+      <Route path="/home" component={Home} />
+    </div>
+  );
+
+  const memRouter = (
+    <MemoryRouter
+      initialEntries={["/", "/home"]}
+      initialIndex={initialPath}>
+      {routerContent}
+    </MemoryRouter>
+  );
+
+  const browserRouter = (
+    <BrowserRouter>
+      {routerContent}
+    </BrowserRouter>
+  );
+
+  const router = props.isBrowser ? browserRouter : memRouter;
+
+  return (
+    <div>
+      {router}
+    </div>
+  );
 }

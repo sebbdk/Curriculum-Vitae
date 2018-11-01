@@ -2,15 +2,14 @@
 * @Author: Kasper Sebb' brandt
 * @Date:   2018-10-24 21:46:25
 * @Last Modified by:   Kasper Sebb' brandt
-* @Last Modified time: 2018-10-26 23:17:09
+* @Last Modified time: 2018-10-28 13:19:43
 */
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-import { App } from './app';
-import MyRouter from './router.test';
+import App from './app';
 
-export class Template extends Component {
+export default class AppTemplate extends Component {
   render() {
     const assets = Object
       .values(this.props.assets)
@@ -26,7 +25,7 @@ export class Template extends Component {
 
         <div>STUFF: {this.props.path}</div>
         <div id="root">
-          <MyRouter path={this.props.path}></MyRouter>
+          <App path={this.props.path}></App>
         </div>
 
         {assets}
