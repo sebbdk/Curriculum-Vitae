@@ -2,7 +2,7 @@
 * @Author: Kasper Sebb' brandt
 * @Date:   2018-10-31 00:18:45
 * @Last Modified by:   Kasper Sebb' brandt
-* @Last Modified time: 2018-11-01 21:22:19
+* @Last Modified time: 2018-11-02 20:52:18
 */
 const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
@@ -29,7 +29,7 @@ module.exports = (env, argv) => {
       filename: 'bundle.js',
       path: path.resolve(__dirname, 'dist'),
     },
-
+    mode: 'development',
     module: {
       rules: [
         {
