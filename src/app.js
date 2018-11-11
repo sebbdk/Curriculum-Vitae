@@ -2,13 +2,15 @@
 * @Author: Kasper Sebb' brandt
 * @Date:   2018-10-26 20:02:56
 * @Last Modified by:   Kasper Sebb' brandt
-* @Last Modified time: 2018-11-02 20:52:59
+* @Last Modified time: 2018-11-05 17:26:25
 */
 import React from 'react'
 import { MemoryRouter, BrowserRouter, Route, Link } from 'react-router-dom';
 
 import Home from './m/pages/home.js'
 import Index from './m/pages/index.js'
+
+import './app.css';
 
 export default function App(props) {
   let initialPath = '';
@@ -48,7 +50,7 @@ export default function App(props) {
   const router = props.isBrowser ? browserRouter : memRouter;
 
   return (
-    <div>
+    <div class="app">
       {router}
     </div>
   );
