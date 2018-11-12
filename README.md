@@ -16,4 +16,4 @@ My Curriculum Vitae or resumé if you like.
 
 # Other notes
 Goal site size is 16 kb.
-Defered loadin can' be larger
+Defered loading can' be larger
