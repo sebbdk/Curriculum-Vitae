@@ -1,0 +1,140 @@
+/*
+* @Author: Kasper Sebb' brandt
+* @Date:   2018-11-05 17:18:26
+* @Last Modified by:   Kasper Sebb' brandt
+* @Last Modified time: 2018-11-12 21:08:16
+*/
+.title-section { text-align: center; }
+.title-section img {
+  border-radius: 100%;
+  border: 5px solid tomato;
+  box-shadow: 0px 0 10px rgba(0,0,0, 0.2);
+}
+
+.v-section {
+  padding: 40px;
+}
+
+.contact-section {
+  text-align: center;
+}
+
+.experience-section {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.bggrey {
+  background-color: #eee;
+  position: relative;
+}
+
+.experience-section .experience {
+  border: 2px solid tomato;
+  background-color: #ff63470a;
+  position: relative;
+  padding: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 30px;
+  box-sizing: border-box;
+  height: calc(100% - 20px);
+  flex-wrap: wrap;
+  min-height: 90px;
+  box-shadow: 0 0 15px rgba(0,0,0, 0.1);
+}
+
+.experience::after {
+  content: ' ';
+  display: block;
+  position: absolute;
+  bottom: -24px;
+  left: 40px;
+  height: 20px;
+  border: 2px solid tomato;
+}
+
+.experience-section > .v-col-12:last-child .experience::after {
+  display: none;
+}
+
+.section-title {
+  border-bottom: 1px solid #333;
+  margin-bottom: 1em;
+}
+
+.experience-section .experience small {
+  display: block;
+}
+
+.skills-section {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+.v-skill {
+  list-style: none;
+}
+
+.v-skill span {
+  background-color: tomato;
+  color: #FFF;
+  display: block;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 0.9em;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  padding: 2px 5px;
+}
+
+.v-skill:first-child span {
+  margin-left: 0;
+}
+
+.vmal0 {
+  margin-left: 0px;
+}
+
+.v-col-12 {
+  width: 100%;
+}
+
+.vcol {
+  display: flex;
+  flex-direction: column;
+}
+
+.v-section-padded {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+@media only screen and (min-width : 769px) {
+  .vsmrow {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .v-section-padded {
+    padding-left: 390px;
+    padding-right: 40px;
+  }
+
+  .v-col-sm-2 {
+    width: 16.6666666667%;
+  }
+
+  .v-col-sm-6 {
+    width: 50%;
+  }
+
+  .v-col-sm-10 {
+    width: 83.3333333333%;
+    box-sizing: border-box;
+  }
+
+  .vsmpar40 {
+    padding-right: 40px;
+  }
+}

@@ -1,0 +1,100 @@
+/*
+* @Author: Kasper Sebb' brandt
+* @Date:   2018-10-23 19:53:21
+* @Last Modified by:   Kasper Sebb' brandt
+* @Last Modified time: 2018-11-12 21:10:08
+*/
+body, html {
+  background-color: #222;
+  padding: 0;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2 {
+  margin-top: 0;
+} 
+
+h3 {
+  font-size: 1em;
+  font-weight: 700;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+h3 + p {
+  margin-top: 0;
+} 
+
+a {
+  color: #428bca;
+  text-decoration: none;
+}
+
+.app {
+  min-height: 100vh;
+  margin: auto;
+  max-width: 1280px;
+  background-color: #fff;
+  box-sizing: border-box;
+  border-top: 15px solid tomato;
+  border-bottom: 15px solid tomato;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.pbbreak {
+  display: none;
+}
+
+.hide {
+  display: none;
+}
+
+@media print {
+  body, html {
+    background-color: transparent;
+    font-size: 14px;
+  }
+
+  .print-hide {
+    display: none;
+  }
+
+  .pabreak {
+    break-after: left;
+    padding-bottom: 40px;
+  }
+
+  .pbbreak {
+    display: block;
+    page-break-before: always;
+    padding-bottom: 40px;
+  }
+
+  .clr-bg {
+    background-color: transparent;
+  }
+
+  .app {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    border-top: 0;
+    border-bottom: 0;
+  }
+}
+
+#footer {
+  margin: 20px 40px 40px;
+}
+
+#footer p {
+  text-align: center;
+  color: #CCC;
+}
