@@ -2,7 +2,7 @@
 * @Author: Kasper Sebb' brandt
 * @Date:   2018-11-05 17:18:26
 * @Last Modified by:   Kasper Sebb' brandt
-* @Last Modified time: 2018-11-12 21:08:16
+* @Last Modified time: 2018-11-12 21:53:00
 */
 .title-section { text-align: center; }
 .title-section img {
@@ -19,17 +19,12 @@
   text-align: center;
 }
 
-.experience-section {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .bggrey {
   background-color: #eee;
   position: relative;
 }
 
-.experience-section .experience {
+.experience {
   border: 2px solid tomato;
   background-color: #ff63470a;
   position: relative;
