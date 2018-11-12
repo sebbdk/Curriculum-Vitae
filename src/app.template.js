@@ -2,7 +2,7 @@
 * @Author: Kasper Sebb' brandt
 * @Date:   2018-10-24 21:46:25
 * @Last Modified by:   Kasper Sebb' brandt
-* @Last Modified time: 2018-10-28 13:19:43
+* @Last Modified time: 2018-11-11 18:01:53
 */
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
@@ -22,8 +22,7 @@ export default class AppTemplate extends Component {
           <link rel="stylesheet" href="/main.css"/>
       </head>
       <body>
-
-        <div>STUFF: {this.props.path}</div>
+      
         <div id="root">
           <App path={this.props.path}></App>
         </div>

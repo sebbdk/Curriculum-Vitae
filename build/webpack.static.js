@@ -2,7 +2,7 @@
 * @Author: Kasper Sebb' brandt
 * @Date:   2018-10-31 00:18:27
 * @Last Modified by:   Kasper Sebb' brandt
-* @Last Modified time: 2018-10-31 00:18:34
+* @Last Modified time: 2018-11-11 18:25:25
 */
 const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
@@ -59,6 +59,17 @@ module.exports = (env, argv) => {
               presets: ['@babel/preset-env', '@babel/preset-react']
             }
           }
+        },
+        {
+          test: /\.(png|jpg|gif)$/i,
+          use: [
+            {
+              loader: 'url-loader',
+              options: {
+                limit: 8192
+              }
+            }
+          ]
         }
       ]
     },
