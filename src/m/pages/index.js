@@ -2,7 +2,7 @@
 * @Author: Kasper Sebb' brandt
 * @Date:   2018-10-23 19:54:04
 * @Last Modified by:   Kasper Sebb' brandt
-* @Last Modified time: 2018-11-12 21:53:00
+* @Last Modified time: 2018-11-12 21:54:39
 */
 import React, { Component } from 'react';
 import ReactMarkdown from 'react-markdown';
@@ -63,7 +63,7 @@ export class Index extends Component {
             <div className="pbbreak"></div>
             
             <h2 className="section-title">Experience</h2>
-            <div>
+            <div className="experience-section">
               <div className="v-col-12">
                 <div className="experience">
                   <b>Senior frontend consultant at Saxobank</b><br />
