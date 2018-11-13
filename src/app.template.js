@@ -2,7 +2,7 @@
 * @Author: Kasper Sebb' brandt
 * @Date:   2018-10-24 21:46:25
 * @Last Modified by:   Kasper Sebb' brandt
-* @Last Modified time: 2018-11-13 19:14:03
+* @Last Modified time: 2018-11-13 19:19:50
 */
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
@@ -19,7 +19,7 @@ export default class AppTemplate extends Component {
       <html>
       <head>
           <title>Vargr Vitae</title>
-          <link rel="stylesheet" href="/main.css"/>
+          <link rel="stylesheet" href="main.css"/>
       </head>
       <body>
       
