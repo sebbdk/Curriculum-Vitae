@@ -1,9 +1,7 @@
 {
   "scripts": {
-    "webpack": "webpack --mode development --progress --colors",
-    "webpack:prod": "webpack --mode production --progress --colors",
-    "dev": "webpack-dev-server --progress --colors",
-    "start": "npm run dev",
+    "build": "webpack --mode production --progress --colors",
+    "start": "webpack-dev-server --progress --colors",
     "serve": "http-server ./dist -p 8081"
   },
   "dependencies": {
