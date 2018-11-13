@@ -2,7 +2,7 @@
 * @Author: Kasper Sebb' brandt
 * @Date:   2018-10-24 21:46:25
 * @Last Modified by:   Kasper Sebb' brandt
-* @Last Modified time: 2018-11-12 21:40:25
+* @Last Modified time: 2018-11-13 19:15:06
 */
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
@@ -13,7 +13,7 @@ export default class AppTemplate extends Component {
   render() {
     const assets = Object
       .values(this.props.assets)
-      .reduce((name, val) => (<script src={'/'+val} async></script>), '');
+      .reduce((name, val) => (<script src={val} async></script>), '');
 
     return (
       <html>
