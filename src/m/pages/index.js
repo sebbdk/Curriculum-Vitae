@@ -2,7 +2,7 @@
 * @Author: Kasper Sebb' brandt
 * @Date:   2018-10-23 19:54:04
 * @Last Modified by:   Kasper Sebb' brandt
-* @Last Modified time: 2018-11-13 19:03:05
+* @Last Modified time: 2018-11-13 21:50:00
 */
 import React, { Component } from 'react';
 import ReactMarkdown from 'react-markdown';
@@ -37,7 +37,7 @@ export class Index extends Component {
     return (
       <div>
         <div className="v-section vcol vsmrow">
-          <div class="vsmlcol">
+          <div className="vsmlcol">
             <div className="vsmpar40">
               <div className="title-section">
                 <h1>Sebastian Vargr</h1>
@@ -132,7 +132,7 @@ export class Index extends Component {
         </div>
 
         <div className="v-section vcol vsmrow bggrey">
-          <div class="vsmlcol"></div>
+          <div className="vsmlcol"></div>
           <div>
             <p className="section-title">
               <b>Languages</b><br />
