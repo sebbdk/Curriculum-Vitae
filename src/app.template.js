@@ -2,7 +2,7 @@
 * @Author: Kasper Sebb' brandt
 * @Date:   2018-10-24 21:46:25
 * @Last Modified by:   Kasper Sebb' brandt
-* @Last Modified time: 2018-11-13 19:15:06
+* @Last Modified time: 2018-11-13 19:21:10
 */
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';

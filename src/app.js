@@ -2,7 +2,7 @@
 * @Author: Kasper Sebb' brandt
 * @Date:   2018-10-26 20:02:56
 * @Last Modified by:   Kasper Sebb' brandt
-* @Last Modified time: 2018-11-13 19:17:20
+* @Last Modified time: 2018-11-13 19:21:16
 */
 import React from 'react'
 import { MemoryRouter, BrowserRouter, Route, Link } from 'react-router-dom';
