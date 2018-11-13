@@ -2,7 +2,11 @@
 * @Author: Kasper Sebb' brandt
 * @Date:   2018-10-31 00:18:27
 * @Last Modified by:   Kasper Sebb' brandt
-* @Last Modified time: 2018-11-12 21:34:37
+<<<<<<< HEAD
+* @Last Modified time: 2018-11-13 19:03:52
+=======
+* @Last Modified time: 2018-11-13 18:18:25
+>>>>>>> master
 */
 const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
@@ -11,21 +15,13 @@ const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin'
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
-const env = process.env.NODE_ENV
-
-const config = {
-   mode: env || 'development'
-}
-
 module.exports = (env, argv) => { 
-  // argv.mode -> production | dev
-
   return {
     entry: './src/index.ssr.js',
     devtool: 'source-map',
     output: {
       filename: 'bundle.js',
-      path: path.resolve(__dirname, '../'),
+      path: path.resolve(process.cwd(), 'dist'),
 
       /* IMPORTANT!
        * You must compile to UMD or CommonJS

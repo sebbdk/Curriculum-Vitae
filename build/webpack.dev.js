@@ -2,7 +2,7 @@
 * @Author: Kasper Sebb' brandt
 * @Date:   2018-10-31 00:18:45
 * @Last Modified by:   Kasper Sebb' brandt
-* @Last Modified time: 2018-11-11 18:28:52
+* @Last Modified time: 2018-11-13 18:17:23
 */
 const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
@@ -13,15 +13,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const InterpolateHtmlPlugin = require('react-dev-utils/InterpolateHtmlPlugin');;
 
-const env = process.env.NODE_ENV
-
-const config = {
-   mode: env || 'development'
-}
-
 module.exports = (env, argv) => { 
-  // argv.mode -> production | dev
-
   return {
     entry: './src/dev.index.js',
     devtool: 'source-map',
