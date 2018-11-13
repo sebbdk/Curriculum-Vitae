@@ -2,7 +2,7 @@
 * @Author: Kasper Sebb' brandt
 * @Date:   2018-10-26 20:02:56
 * @Last Modified by:   Kasper Sebb' brandt
-* @Last Modified time: 2018-11-12 20:22:07
+* @Last Modified time: 2018-11-13 19:17:20
 */
 import React from 'react'
 import { MemoryRouter, BrowserRouter, Route, Link } from 'react-router-dom';
@@ -26,6 +26,7 @@ export default function App(props) {
       <div style={{ display: "none" }}>
         <Link to="/">index</Link> | <Link to="/home">home</Link>
       </div>
+      <Route exact path="/Curriculum-Vitae/" component={Index} />
       <Route exact path="/" component={Index} />
       <Route path="/home" component={Home} />
     </div>

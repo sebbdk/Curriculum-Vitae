@@ -3,7 +3,7 @@
     "build": "webpack --mode production --progress --colors",
     "ghpage": "yarn build && mv dist/* ./",
     "start": "webpack-dev-server --progress --colors --host 0.0.0.0",
-    "serve": "http-server ./dist -p 8081"
+    "serve": "http-server ./ -p 8081"
   },
   "dependencies": {
     "@babel/core": "^7.1.2",
