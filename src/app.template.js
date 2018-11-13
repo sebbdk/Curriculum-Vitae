@@ -2,7 +2,7 @@
 * @Author: Kasper Sebb' brandt
 * @Date:   2018-10-24 21:46:25
 * @Last Modified by:   Kasper Sebb' brandt
-* @Last Modified time: 2018-11-13 22:00:33
+* @Last Modified time: 2018-11-13 22:09:34
 */
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
@@ -20,6 +20,13 @@ export default class AppTemplate extends Component {
       <head>
           <meta charset="utf-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+          <meta property="og:url" content="http://sebbdk.github.io/Curriculum-Vitae/">
+          <meta property="og:image" content="http://sebbdk.github.io/Curriculum-Vitae/6aa4c6bd6da5eab7b0de6d9a33748081.png">
+          <meta property="og:description" content="Sebastian Vargr - Curriculum Vitae">
+          <meta property="og:title" content="Vargr Vitae">
+          <meta property="og:site_name" content="Vargr Vitae">
+
           <title>Vargr Vitae</title>
           <link rel="stylesheet" href="main.css" />
       </head>
