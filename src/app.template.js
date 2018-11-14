@@ -22,7 +22,7 @@ export default class AppTemplate extends Component {
           <meta property="og:site_name" content="Vargr Vitae" />
 
           <meta name="theme-color" content="tomato" />
-          <meta name="escription" content="Curriculum Vitae for Sebastian Vargr" />
+          <meta name="Description" content="Curriculum Vitae for Sebastian Vargr" />
 
           <title>Vargr Vitae</title>
           <link rel="stylesheet" href="main.css" />
