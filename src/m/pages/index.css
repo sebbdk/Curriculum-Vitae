@@ -1,13 +1,7 @@
-/*
-* @Author: Kasper Sebb' brandt
-* @Date:   2018-11-05 17:18:26
-* @Last Modified by:   Kasper Sebb' brandt
-* @Last Modified time: 2018-11-13 19:03:17
-*/
 .title-section { text-align: center; }
 .title-section img {
   border-radius: 100%;
-  border: 5px solid tomato;
+  border: 5px solid #A61132;
   box-shadow: 0px 0 10px rgba(0,0,0, 0.2);
   max-width: 100%;
 }
@@ -26,7 +20,7 @@
 }
 
 .experience {
-  border: 2px solid tomato;
+  border: 2px solid #A61132;
   background-color: #ff63470a;
   position: relative;
   padding: 20px;
@@ -46,7 +40,7 @@
   bottom: -24px;
   left: 40px;
   height: 20px;
-  border: 2px solid tomato;
+  border: 2px solid #A61132;
 }
 
 .experience-section > .v-col-12:last-child .experience::after {
@@ -73,7 +67,7 @@
 }
 
 .v-skill span {
-  background-color: tomato;
+  background-color: #A61132;
   color: #FFF;
   display: block;
   border-radius: 5px;
