@@ -2,7 +2,7 @@
 * @Author: Kasper Sebb' brandt
 * @Date:   2018-10-26 20:02:56
 * @Last Modified by:   Kasper Sebb' brandt
-* @Last Modified time: 2018-11-13 19:21:16
+* @Last Modified time: 2018-11-14 20:06:45
 */
 import React from 'react'
 import { MemoryRouter, BrowserRouter, Route, Link } from 'react-router-dom';
@@ -56,7 +56,7 @@ export default function App(props) {
     <div id="footer" className="print-hide">
       <p>
         This page was build as a prerendered single page application. <br />
-        Check out the source-code here on Github <a href="https://github.com/sebbdk/Curriculum-Vitae" target="_blank">here</a>.</p>
+        Check out the source-code here on <a rel="noreferrer" href="https://github.com/sebbdk/Curriculum-Vitae" target="_blank">Github</a>.</p>
     </div>
     </div>
   );
