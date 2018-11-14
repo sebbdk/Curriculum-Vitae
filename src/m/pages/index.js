@@ -1,9 +1,3 @@
-/*
-* @Author: Kasper Sebb' brandt
-* @Date:   2018-10-23 19:54:04
-* @Last Modified by:   Kasper Sebb' brandt
-* @Last Modified time: 2018-11-13 21:47:02
-*/
 import React, { Component } from 'react';
 import ReactMarkdown from 'react-markdown';
 
@@ -42,14 +36,14 @@ export class Index extends Component {
               <div className="title-section">
                 <h1>Sebastian Vargr</h1>
                 <p>Developing' Developer</p>
-                <img src={ProfileImg} />
+                <img src={ProfileImg} alt="picture of me" />
               </div>
               <div className="contact-section">
                 <h2>Contact</h2>
                 Email: <a href="mailto:sebb@sebb.dk">sebb@sebb.dk</a><br />
                 tlf: <a href="tel:+45 28491314">+45 28491314</a><br />
                 <br />
-                <a href="https://www.linkedin.com/in/sebbdk/" target="_blank">LinkedIn</a>
+                <a href="https://www.linkedin.com/in/sebbdk/" rel="noreferrer" target="_blank">LinkedIn</a>
               </div>
             </div>
           </div>
