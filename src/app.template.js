@@ -21,7 +21,7 @@ export default class AppTemplate extends Component {
           <meta property="og:title" content="Vargr Vitae" />
           <meta property="og:site_name" content="Vargr Vitae" />
 
-          <meta name="theme-color" content="tomato" />
+          <meta name="theme-color" content="#A61132" />
           <meta name="Description" content="Curriculum Vitae for Sebastian Vargr" />
 
           <title>Vargr Vitae</title>
