@@ -1,9 +1,3 @@
-/*
-* @Author: Kasper Sebb' brandt
-* @Date:   2018-10-26 20:02:56
-* @Last Modified by:   Kasper Sebb' brandt
-* @Last Modified time: 2018-11-14 20:03:00
-*/
 import React from 'react'
 import { MemoryRouter, BrowserRouter, Route, Link } from 'react-router-dom';
 
