@@ -3,8 +3,9 @@ Curriculum-Vitae
 
 My Curriculum Vitae or resumé if you like.
 
-## how to release
-Run switch to `gh-pages` branch merge master in and run `yarn ghpages`.
+## How to release
+After having done changes to master.
+Switch to `gh-pages` branch merge master in and run `yarn ghpages`.
 The commit the changes to the branch up the remote and wait a few minutes for the changes to reflect.
 
 **Todo**
