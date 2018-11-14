@@ -50,7 +50,7 @@ export default function App(props) {
     <div id="footer" className="print-hide">
       <p>
         This page was build as a prerendered single page application. <br />
-        Check out the source-code here on <a rel="noreferrer" href="https://github.com/sebbdk/Curriculum-Vitae" target="_blank">Github</a>.</p>
+        Check out the source-code here on <a className="ilink" rel="noreferrer" href="https://github.com/sebbdk/Curriculum-Vitae" target="_blank">Github</a>.</p>
     </div>
     </div>
   );
