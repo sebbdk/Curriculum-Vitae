@@ -28,7 +28,10 @@ h3 + p {
 
 a {
   color: #265783;
-  text-decoration: none;
+}
+
+.ilink {
+  color: #fff;
 }
 
 .app {
