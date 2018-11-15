@@ -41,6 +41,7 @@ export class Index extends Component {
             <div className="vsmpar40">
               <div className="title-section">
                 <h1>Sebastian Vargr</h1>
+                <small>(Formerly Kasper jensen)</small>
                 <p>Developing' Developer</p>
                 <img src={ProfileImg} alt="picture of me" />
               </div>
