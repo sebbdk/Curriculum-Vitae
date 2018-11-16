@@ -8,8 +8,15 @@ After having done changes to master.
 Switch to `gh-pages` branch merge master in and run `yarn ghpages`.
 The commit the changes to the branch up the remote and wait a few minutes for the changes to reflect.
 
-**Todo**
+**Tecknical Todo**
 * Cleanup styles and naming
+* Implement as PWA using Workbox
+* Improve print design, goal is a single A4 page.
+* Implement simple Jest React tests
+
+**Content todo**
+* Add back the portfolio
+* Add the secret ingredient
 
 **Performance todo**
 * Setup performance test/analysis (webpack package analyser)

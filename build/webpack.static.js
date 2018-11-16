@@ -2,7 +2,7 @@
 * @Author: Kasper Sebb' brandt
 * @Date:   2018-10-31 00:18:27
 * @Last Modified by:   Kasper Sebb' brandt
-* @Last Modified time: 2018-11-13 18:18:25
+* @Last Modified time: 2018-11-16 23:13:05
 */
 const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
@@ -16,7 +16,7 @@ module.exports = (env, argv) => {
     entry: './src/index.ssr.js',
     devtool: 'source-map',
     output: {
-      filename: 'bundle.js',
+      filename: 'bundle.[contenthash].js',
       path: path.resolve(process.cwd(), 'dist'),
 
       /* IMPORTANT!
@@ -74,7 +74,9 @@ module.exports = (env, argv) => {
     },
    
     plugins: [
-      new MiniCssExtractPlugin(),
+      new MiniCssExtractPlugin({
+        filename: '[name].[hash].css',
+      }),
       new StaticSiteGeneratorPlugin({
         paths: [
           '/',

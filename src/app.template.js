@@ -5,9 +5,12 @@ import App from './app';
 
 export default class AppTemplate extends Component {
   render() {
-    const assets = Object
-      .values(this.props.assets)
-      .reduce((name, val) => (<script src={val} async></script>), '');
+    const assets = Object.keys(this.props.webpackStats.compilation.assets)
+    const js = assets.filter(value => value.match(/\.js$/))
+    const css = assets.filter(value => value.match(/\.css$/))
+
+    const jsScript = js.reduce((name, val) => (<script async src={val}></script>), '');
+    const cssLink = css.reduce((name, val) => (<link rel="stylesheet" href={val} />), '');
 
     return (
       <html lang="en">
@@ -25,7 +28,7 @@ export default class AppTemplate extends Component {
           <meta name="Description" content="Curriculum Vitae for Sebastian Vargr" />
 
           <title>Vargr Vitae</title>
-          <link rel="stylesheet" href="main.css" />
+          {cssLink}
       </head>
       <body>
       
@@ -33,7 +36,7 @@ export default class AppTemplate extends Component {
           <App path={this.props.path}></App>
         </div>
 
-        {assets}
+        {jsScript}
       </body>
       </html>
     );
