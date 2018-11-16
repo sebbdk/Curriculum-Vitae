@@ -1,13 +1,3 @@
-/*
-* @Author: Kasper Sebb' brandt
-* @Date:   2018-10-31 00:18:27
-* @Last Modified by:   Kasper Sebb' brandt
-<<<<<<< HEAD
-* @Last Modified time: 2018-11-13 19:03:52
-=======
-* @Last Modified time: 2018-11-13 18:18:25
->>>>>>> master
-*/
 const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
@@ -20,7 +10,7 @@ module.exports = (env, argv) => {
     entry: './src/index.ssr.js',
     devtool: 'source-map',
     output: {
-      filename: 'bundle.js',
+      filename: 'bundle.[contenthash].js',
       path: path.resolve(process.cwd(), 'dist'),
 
       /* IMPORTANT!
@@ -78,7 +68,9 @@ module.exports = (env, argv) => {
     },
    
     plugins: [
-      new MiniCssExtractPlugin(),
+      new MiniCssExtractPlugin({
+        filename: '[name].[hash].css',
+      }),
       new StaticSiteGeneratorPlugin({
         paths: [
           '/',
