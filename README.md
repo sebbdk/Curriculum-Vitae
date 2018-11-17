@@ -11,21 +11,22 @@ The commit the changes to the branch up the remote and wait a few minutes for th
 
 **Tecknical Todo**
 * Cleanup styles and naming
-* Improve print design, goal is a single A4 page.
 * Implement simple Jest React tests
-* Ensure images have dimensions and color placeholders
 
 **Content todo**
 * Add back the portfolio
 * Add the secret ingredient
+* Adobt Sebb.dk color scheme?
+* Improve print design, goal is a single A4 page.
 
 **Performance todo**
 * Setup dependency analyses 
-* Optimise script size, currently script size is about 48.05kb
-* Avoid umd in served production js?
+* Optimise script size, currently script size is about 74.2kb
 * preact?
+* Avoid umd in served production js?
+* Ensure images have dimensions and color placeholders
 * Webservers should not care about gzip... use compression-webpack-plugin?
-
+* Implement semantic tags for better indexing and assistive tecknology reasons, main, section etc.
 * Implement as PWA using Workbox
 
 **Done list**
