@@ -7,7 +7,7 @@
 import React, { Component } from 'react';
 import ReactMarkdown from 'react-markdown';
 
-import './index.css';
+import styles from './index.css';
 import ProfileImg from './profile_img.png';
 
 const aboutMe = `
@@ -36,6 +36,7 @@ export class Index extends Component {
   render() {
     return (
       <div>
+        <style type="text/css">{styles}</style>
         <div className="v-section vcol vsmrow">
           <div className="vsmlcol">
             <div className="vsmpar40">

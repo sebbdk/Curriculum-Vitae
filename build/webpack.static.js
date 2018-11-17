@@ -24,15 +24,17 @@ module.exports = (env, argv) => {
         {
           test: /\.css$/,
           use: [
-            {
+            /*{
               loader: MiniCssExtractPlugin.loader,
               options: {
                 // you can specify a publicPath here
                 // by default it use publicPath in webpackOptions.output
                 publicPath: '../'
               }
-            },
-            "css-loader"
+            },*/
+            "to-string-loader",
+            "css-loader",
+            "postcss-loader"
           ]
         },
         {
@@ -62,15 +64,17 @@ module.exports = (env, argv) => {
 
     optimization: {
       minimizer: [
-        new UglifyJsPlugin(),
+        new UglifyJsPlugin({
+          extractComments: true
+        }),
         new OptimizeCssAssetsPlugin()
       ]
     },
    
     plugins: [
-      new MiniCssExtractPlugin({
+      /*new MiniCssExtractPlugin({
         filename: '[name].[hash].css',
-      }),
+      }),*/
       new StaticSiteGeneratorPlugin({
         paths: [
           '/',

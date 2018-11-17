@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import App from './app';
+import styles from './app.css';
 
 export default class AppTemplate extends Component {
   render() {
@@ -29,6 +30,8 @@ export default class AppTemplate extends Component {
 
           <title>Vargr Vitae</title>
           {cssLink}
+
+          <style type="text/css">{styles}</style>
       </head>
       <body>
       
