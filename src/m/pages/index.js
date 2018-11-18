@@ -4,6 +4,10 @@ import ReactMarkdown from 'react-markdown';
 import styles from './index.css';
 import ProfileImg from './profile_img.png';
 
+function getStyles(styles) {
+  return typeof styles === 'object' ? '' : <style type="text/css">{styles}</style>;
+}
+
 const aboutMe = `
 My name is Sebastian Vargr, a mostly' autodidact developer from Copenhagen, Denmark.
 I enjoy jogging, making games, building more physical things like e-boards, GPU mining rigs, 3d-printers etc. in my workshop.
@@ -30,7 +34,7 @@ export class Index extends Component {
   render() {
     return (
       <div>
-        <style type="text/css">{styles}</style>
+        {getStyles(styles)}
         <div className="v-section vcol vsmrow">
           <div className="vsmlcol">
             <div className="vsmpar40">
