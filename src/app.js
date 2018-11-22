@@ -2,7 +2,7 @@ import React from 'react'
 import { MemoryRouter, BrowserRouter, Route, Link } from 'react-router-dom';
 
 import Home from './m/pages/home.js'
-import Index from './m/pages/index.js'
+import Index from './m/pages/index'
 
 import './app.css';
 
