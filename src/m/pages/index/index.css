@@ -31,6 +31,19 @@
   flex-wrap: wrap;
   min-height: 90px;
   box-shadow: 0 0 15px rgba(0,0,0, 0.1);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.info-block__header {
+  background-color: #517b48;
+  display: block;
+  margin-left: -20px;
+  margin-right: -20px;
+  margin-top: -20px;
+  line-height: 50px;
+  padding-left: 20px;
+  color: #fff;
 }
 
 .experience-section .info-block::after {
@@ -76,6 +89,7 @@
   margin-right: 5px;
   margin-bottom: 5px;
   padding: 2px 5px;
+  line-height: 25px;
 }
 
 .v-skill--inline span {

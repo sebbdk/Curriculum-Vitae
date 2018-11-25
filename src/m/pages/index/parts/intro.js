@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import ReactMarkdown from 'react-markdown';
 
 const aboutMe = `
-**OBS! i am currently updating and re-designing the page. Dont mind the cats with toast strapped to them! :)**
-
 My name is Sebastian Vargr, a mostly' autodidact developer from Copenhagen, Denmark.
 I enjoy jogging, making games, building more physical things like e-boards, GPU mining rigs, 3d-printers etc. in my workshop.
 
