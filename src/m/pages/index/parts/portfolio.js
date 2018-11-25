@@ -17,9 +17,9 @@ export default class extends Component {
 
           <div className="info-block">
             <div>
-              <b>Saxobank Website <InlineSkill>Website maintenence</InlineSkill> <InlineSkill>Senior frontend developer</InlineSkill></b><br />
+              <b className="info-block__header">Saxobank Website <InlineSkill>Website maintenence</InlineSkill> <InlineSkill>Senior frontend developer</InlineSkill></b><br />
               <p>
-                As a consultant i refactored their build sollution for simplicity and performance and helped implement their SPA to none SPA migration plan to improve load metrics, I Also established code guidelines, as well as documented their frontend components and process.
+                As a consultant i refactored their build sollution for simplicity and performance and helped implement their SPA to none SPA migration plan to improve load metrics, I also established code guidelines, as well as documented their frontend components and process.
               </p>
 
               <strong>Tags</strong>
@@ -32,7 +32,7 @@ export default class extends Component {
 
           <div className="info-block">
             <div>
-              <b>Nora <InlineSkill>Single page application</InlineSkill> <InlineSkill>Senior frontend developer</InlineSkill></b><br />
+              <b className="info-block__header">Nora <InlineSkill>Single page application</InlineSkill> <InlineSkill>Senior frontend developer</InlineSkill></b><br />
               <p>
                 As a consultant at Nordea i helped build the first version of the Nora investment advice tool in Angular 4+.<br />
                 As the senior frontend developer on the project i planned and helped implenting the frontend SPA architecture.
@@ -54,7 +54,7 @@ export default class extends Component {
 
           <div className="info-block">
             <div>
-              <b>Nordea pension tools <InlineSkill>Single page application</InlineSkill> <InlineSkill>Senior frontend developer</InlineSkill></b><br />
+              <b className="info-block__header">Nordea pension tools <InlineSkill>Single page application</InlineSkill> <InlineSkill>Senior frontend developer</InlineSkill></b><br />
               <p>
                 As a consultant, part of a large 20+ person department working on a internal pension tool. i helped building new features, preparing their internal tools for MIFID requirements,
                 establishing code standards, upgraded their frontend build to sollution to webpack, and helped establish better communication between teams.<br />
@@ -71,7 +71,7 @@ export default class extends Component {
 
           <div className="info-block">
             <div>
-              <b>Sofus & Månemaskinen <InlineSkill>Tablet game</InlineSkill> <InlineSkill>Game developer</InlineSkill></b><br />
+              <b className="info-block__header">Sofus & Månemaskinen <InlineSkill>Tablet game</InlineSkill> <InlineSkill>Game developer</InlineSkill></b><br />
               <p>
                 Together with Game Designer Malte Burup, i took over development of existing already started flash based mobile game (Android & iOS).<br />
                 The game it self is made as an interactive childrens book, ages 3-6, where the child and their parent has to help the protagonist Sofus solve puzzles to fix the moon.<br />
@@ -97,7 +97,7 @@ export default class extends Component {
 
           <div className="info-block">
             <div>
-              <b>Go beaver! <InlineSkill>Mobile game</InlineSkill> <InlineSkill>Game developer</InlineSkill></b><br />
+              <b className="info-block__header">Go beaver! <InlineSkill>Mobile game</InlineSkill> <InlineSkill>Game developer</InlineSkill></b><br />
               <p>
                 I was hired to code a small physics puzzle game centered about bridges to unite to beavers.
               </p>
@@ -118,7 +118,7 @@ export default class extends Component {
 
           <div className="info-block">
             <div>
-              <b>Harba <InlineSkill>Mobile app</InlineSkill> <InlineSkill>Fullstack developer</InlineSkill></b><br />
+              <b className="info-block__header">Harba <InlineSkill>Mobile app</InlineSkill> <InlineSkill>Fullstack developer</InlineSkill></b><br />
               <p>
                 For their initial launch May 1. 2016, i made a Cordova based Android/iOS application that allow users to book a Harbor spot.<br />
                 <br />
@@ -146,7 +146,7 @@ export default class extends Component {
 
           <div className="info-block">
             <div>
-              <b>Storebrand reise <InlineSkill>Mobile app</InlineSkill> <InlineSkill>Fullstack developer</InlineSkill></b><br />
+              <b className="info-block__header">Storebrand reise <InlineSkill>Mobile app</InlineSkill> <InlineSkill>Fullstack developer</InlineSkill></b><br />
               <p>
                 Developed while subcontracting for HelpApp.
                 Storebrand reise is a application that allows users to send insurance reports directly to their insurance company, centered around travel insurance.
@@ -174,7 +174,7 @@ export default class extends Component {
 
           <div className="info-block">
             <div>
-              <b>LähiTapiola Matkahätäpalvelu, <InlineSkill>Mobile app</InlineSkill> <InlineSkill>Fullstack developer</InlineSkill></b><br />
+              <b className="info-block__header">LähiTapiola Matkahätäpalvelu, <InlineSkill>Mobile app</InlineSkill> <InlineSkill>Fullstack developer</InlineSkill></b><br />
               <p>
                 Developed while subcontracting for HelpApp.
                 LähiTapiola reise is a application that allows users to send insurance reports directly to their insurance company, centered around travel insurance.
@@ -202,7 +202,7 @@ export default class extends Component {
 
           <div className="info-block">
             <div>
-              <b>Rødt Kort <InlineSkill>Mobile app</InlineSkill> <InlineSkill>Fullstack developer</InlineSkill></b><br />
+              <b className="info-block__header">Rødt Kort <InlineSkill>Mobile app</InlineSkill> <InlineSkill>Fullstack developer</InlineSkill></b><br />
               <p>
                 Developed while subcontracting for HelpApp.
                 Rødt Kort is a application that lets you report a car breakdown via a mobile application and the get notified as the case progresses.<br />
@@ -232,7 +232,7 @@ export default class extends Component {
 
           <div className="info-block">
             <div>
-              <b>AIM Create <InlineSkill>Wordpress site</InlineSkill> <InlineSkill>Fullstack developer</InlineSkill></b><br />
+              <b className="info-block__header">AIM Create <InlineSkill>Wordpress site</InlineSkill> <InlineSkill>Fullstack developer</InlineSkill></b><br />
               <p>
                 AIM Create, needed a simple site to represent them online, but also operated on a limited budget.
                 I helped them setup wordpress and then tutored them to be able to add content on their own.
@@ -250,7 +250,7 @@ export default class extends Component {
 
           <div className="info-block">
             <div>
-              <b>Søndagsavisen <InlineSkill>Wordpress website</InlineSkill> <InlineSkill>Frontend developer</InlineSkill></b><br />
+              <b className="info-block__header">Søndagsavisen <InlineSkill>Wordpress website</InlineSkill> <InlineSkill>Frontend developer</InlineSkill></b><br />
               <p>
                 Made in collboration with another company where they provided design and HTML.<br />
                 Søndagsavisen.dk, needed a new website and wordpress was requested.<br />
@@ -276,7 +276,7 @@ export default class extends Component {
 
           <div className="info-block">
             <div>
-              <b>Rynkedans, <InlineSkill>Mobile app</InlineSkill> <InlineSkill>Fullstack developer</InlineSkill></b><br />
+              <b className="info-block__header">Rynkedans, <InlineSkill>Mobile app</InlineSkill> <InlineSkill>Fullstack developer</InlineSkill></b><br />
               <p>
                 Rynkedans was a campaign mobile-website and facebook application.<br />
                 Rynkedans allows users to videotape the self directly on the website dancing like a monkey. People would then vote on which videos was best and the winners recived a prize.<br />
@@ -304,7 +304,7 @@ export default class extends Component {
 
           <div className="info-block">
             <div>
-              <b>Your party-type! <InlineSkill>Mobile app</InlineSkill> <InlineSkill>Fullstack developer</InlineSkill></b><br />
+              <b className="info-block__header">Your party-type! <InlineSkill>Mobile app</InlineSkill> <InlineSkill>Fullstack developer</InlineSkill></b><br />
               <p>
                 Made as a subcontractor i was given design and specification which i executed.<br />
                 The app was a simple multiple choice web application for Facebook and mobile web.<br />
@@ -330,7 +330,7 @@ export default class extends Component {
 
           <div className="info-block">
             <div>
-              <b>Meet Hue, <InlineSkill>Mobile app</InlineSkill> <InlineSkill>Frontend developer</InlineSkill></b><br />
+              <b className="info-block__header">Meet Hue, <InlineSkill>Mobile app</InlineSkill> <InlineSkill>Frontend developer</InlineSkill></b><br />
               <p>
                 Made as a subcontractor i was shown a website and told to mimick it's design with some changes in Danish.
                 Meet Hue was a campaign site with info about events and a slideshow.
@@ -354,7 +354,7 @@ export default class extends Component {
 
           <div className="info-block">
             <div>
-              <b>Huawei xmas, <InlineSkill>Mobile app</InlineSkill> <InlineSkill>Frontend developer</InlineSkill></b><br />
+              <b className="info-block__header">Huawei xmas, <InlineSkill>Mobile app</InlineSkill> <InlineSkill>Frontend developer</InlineSkill></b><br />
               <p>
                 Made as a subcontractor i was given a initial mockup design and then modified it until the client was happy.<br />
                 <br />
@@ -382,7 +382,7 @@ export default class extends Component {
 
           <div className="info-block">
             <div>
-              <b>fitnessconsulting.dk <InlineSkill>Website</InlineSkill> <InlineSkill>Fullstack developer</InlineSkill></b><br />
+              <b className="info-block__header">fitnessconsulting.dk <InlineSkill>Website</InlineSkill> <InlineSkill>Fullstack developer</InlineSkill></b><br />
               <p>
                 fitnessconsulting.dk needed a booking system for client to book times and for the trainers to except/deny bookings.<br />
                 Given the tight budget i designed and imeplemented minimaly viable booking system for them.
