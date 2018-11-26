@@ -12,11 +12,10 @@ The commit the changes to the branch up the remote and wait a few minutes for th
 ## Stuff that needs doing
 
 **Tecknical Todo**
-* Cleanup styles and naming
+* Cleanup styles and naming to use BEM or Tachyon'ish pattern.
 * Implement simple Jest React testing
 
 **Content todo**
-* Add the secret ingredient
 * Improve on print design
 
 **Performance todo**
