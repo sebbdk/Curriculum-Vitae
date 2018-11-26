@@ -2,7 +2,7 @@
 * @Author: Kasper Sebb' brandt
 * @Date:   2018-10-31 00:18:27
 * @Last Modified by:   Kasper Sebb' brandt
-* @Last Modified time: 2018-11-17 01:34:25
+* @Last Modified time: 2018-11-26 20:48:58
 */
 const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
@@ -23,6 +23,13 @@ module.exports = (env, argv) => {
        * You must compile to UMD or CommonJS
        * so it can be required in a Node context: */
       libraryTarget: 'umd'
+    },
+
+    resolve: {
+        alias: {
+            'react': 'preact-compat',
+            'react-dom': 'preact-compat'
+        }
     },
 
     module: {

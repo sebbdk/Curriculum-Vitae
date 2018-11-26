@@ -2,7 +2,7 @@
 * @Author: Kasper Sebb' brandt
 * @Date:   2018-10-31 00:18:45
 * @Last Modified by:   Kasper Sebb' brandt
-* @Last Modified time: 2018-11-13 18:17:23
+* @Last Modified time: 2018-11-26 20:49:10
 */
 const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
@@ -22,6 +22,14 @@ module.exports = (env, argv) => {
       path: path.resolve(__dirname, 'dist'),
     },
     mode: 'development',
+
+    resolve: {
+        alias: {
+            'react': 'preact-compat',
+            'react-dom': 'preact-compat'
+        }
+    },
+    
     module: {
       rules: [
         {
