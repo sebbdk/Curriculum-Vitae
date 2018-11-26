@@ -11,7 +11,7 @@ export default class extends Component {
         <h1>Sebastian Vargr</h1>
         <small>(Formerly Kasper jensen)</small>
         <p>Developing' Developer</p>
-        <LazyLoad height={300}>
+        <LazyLoad height={310}>
           <img src={ProfileImg} alt="picture of me" />
         </LazyLoad>
       </div>
