@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import LazyLoad from 'react-lazyload';
 
 import InlineSkill from './inline-skill';
 
@@ -34,7 +35,8 @@ export default class extends Component {
             <div>
               <b className="info-block__header">Nora <InlineSkill>Single page application</InlineSkill> <InlineSkill>Senior frontend developer</InlineSkill></b><br />
               <p>
-                As a consultant at Nordea i helped build the first version of the Nora investment advice tool in Angular 4+.<br />
+                As a consultant at Nordea i helped build the first version of the Nora investment advice tool.<br />
+                Initially build in React which i maintained, but later we migrated it to Angular which was Nordeas prefered framework.
                 As the senior frontend developer on the project i planned and helped implenting the frontend SPA architecture.
               </p>
 
@@ -46,9 +48,11 @@ export default class extends Component {
                 <li className="v-skill"><span>Frontend Architecture</span></li>
               </ul>
 
-              <div className="media-block">
-                <img className="info-screenshot" src={require('./assets/cases/nora/1.jpg')} alt="screenshot" />
-              </div>
+              <LazyLoad height={400}>
+                <div className="media-block">
+                  <img className="info-screenshot" src={require('./assets/cases/nora/1.jpg')} alt="screenshot" />
+                </div>
+              </LazyLoad>
             </div>
           </div>  
 
@@ -83,15 +87,17 @@ export default class extends Component {
                 <li className="v-skill"><span>Actionscript</span></li>
               </ul>
 
-              <div className="media-block">
-                <iframe
-                  className="video-preview"
-                  src="https://www.youtube.com/embed/bDZd9An-jAk"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen>
-                </iframe>
-              </div>
+              <LazyLoad height={400}>
+                <div className="media-block">
+                  <iframe
+                    className="video-preview"
+                    src="https://www.youtube.com/embed/bDZd9An-jAk"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen>
+                  </iframe>
+                </div>
+              </LazyLoad>
             </div>
           </div> 
 
@@ -108,11 +114,13 @@ export default class extends Component {
                 <li className="v-skill"><span>C#</span></li>
               </ul>
 
-              <div className="media-block">
-                <img className="info-screenshot" src={require('./assets/cases/beaver/1.png')} alt="screenshot" />
-                <img className="info-screenshot" src={require('./assets/cases/beaver/2.png')} alt="screenshot" />
-                <img className="info-screenshot" src={require('./assets/cases/beaver/3.jpg')} alt="screenshot" />
-              </div>
+              <LazyLoad height={400}>
+                <div className="media-block">
+                  <img className="info-screenshot" src={require('./assets/cases/beaver/1.jpg')} alt="screenshot" />
+                  <img className="info-screenshot" src={require('./assets/cases/beaver/2.jpg')} alt="screenshot" />
+                  <img className="info-screenshot" src={require('./assets/cases/beaver/3.jpg')} alt="screenshot" />
+                </div>
+              </LazyLoad>
             </div>
           </div> 
 
@@ -137,11 +145,13 @@ export default class extends Component {
               </ul>
             </div>
 
-            <div className="media-block">
-              <img className="info-screenshot" src={require('./assets/cases/harba/1.png')} alt="screenshot" />
-              <img className="info-screenshot" src={require('./assets/cases/harba/2.png')} alt="screenshot" />
-              <img className="info-screenshot" src={require('./assets/cases/harba/3.png')} alt="screenshot" />
-            </div>
+            <LazyLoad height={400}>
+              <div className="media-block">
+                <img className="info-screenshot" src={require('./assets/cases/harba/1.jpg')} alt="screenshot" />
+                <img className="info-screenshot" src={require('./assets/cases/harba/2.jpg')} alt="screenshot" />
+                <img className="info-screenshot" src={require('./assets/cases/harba/3.jpg')} alt="screenshot" />
+              </div>
+            </LazyLoad>
           </div>  
 
           <div className="info-block">
@@ -165,11 +175,13 @@ export default class extends Component {
               </ul>
             </div>
 
-            <div className="media-block">
-              <img className="info-screenshot" src={require('./assets/cases/storebrand/1.png')} alt="screenshot" />
-              <img className="info-screenshot" src={require('./assets/cases/storebrand/2.png')} alt="screenshot" />
-              <img className="info-screenshot" src={require('./assets/cases/storebrand/3.png')} alt="screenshot" />
-            </div>
+            <LazyLoad height={400}>
+              <div className="media-block">
+                <img className="info-screenshot" src={require('./assets/cases/storebrand/1.jpg')} alt="screenshot" />
+                <img className="info-screenshot" src={require('./assets/cases/storebrand/2.jpg')} alt="screenshot" />
+                <img className="info-screenshot" src={require('./assets/cases/storebrand/3.jpg')} alt="screenshot" />
+              </div>
+            </LazyLoad>
           </div>  
 
           <div className="info-block">
@@ -193,11 +205,13 @@ export default class extends Component {
               </ul>
             </div>
 
-            <div className="media-block">
-              <img className="info-screenshot" src={require('./assets/cases/lahitapiola/1.png')} alt="screenshot" />
-              <img className="info-screenshot" src={require('./assets/cases/lahitapiola/2.png')} alt="screenshot" />
-              <img className="info-screenshot" src={require('./assets/cases/lahitapiola/3.png')} alt="screenshot" />
-            </div>
+            <LazyLoad height={400}>
+              <div className="media-block">
+                <img className="info-screenshot" src={require('./assets/cases/lahitapiola/1.jpg')} alt="screenshot" />
+                <img className="info-screenshot" src={require('./assets/cases/lahitapiola/2.jpg')} alt="screenshot" />
+                <img className="info-screenshot" src={require('./assets/cases/lahitapiola/3.jpg')} alt="screenshot" />
+              </div>
+            </LazyLoad>
           </div>  
 
           <div className="info-block">
@@ -221,13 +235,15 @@ export default class extends Component {
             </div>
 
             
-            <div className="media-block">
-              <img className="info-screenshot" src={require('./assets/cases/redcard/1.png')} alt="screenshot" />
-              <img className="info-screenshot" src={require('./assets/cases/redcard/2.png')} alt="screenshot" />
-              <img className="info-screenshot" src={require('./assets/cases/redcard/3.png')} alt="screenshot" />
-              <img className="info-screenshot" src={require('./assets/cases/redcard/4.png')} alt="screenshot" />
-              <img className="info-screenshot" src={require('./assets/cases/redcard/5.png')} alt="screenshot" />
-            </div>
+            <LazyLoad height={400}>
+              <div className="media-block">
+                <img className="info-screenshot" src={require('./assets/cases/redcard/1.jpg')} alt="screenshot" />
+                <img className="info-screenshot" src={require('./assets/cases/redcard/2.jpg')} alt="screenshot" />
+                <img className="info-screenshot" src={require('./assets/cases/redcard/3.jpg')} alt="screenshot" />
+                <img className="info-screenshot" src={require('./assets/cases/redcard/4.jpg')} alt="screenshot" />
+                <img className="info-screenshot" src={require('./assets/cases/redcard/5.jpg')} alt="screenshot" />
+              </div>
+            </LazyLoad>
           </div>  
 
           <div className="info-block">
@@ -268,10 +284,11 @@ export default class extends Component {
               </ul>
             </div>
 
-            
-            <div className="media-block">
-              <img className="info-screenshot" src={require('./assets/cases/sondagsavisen/1.png')} alt="screenshot" />
-            </div>
+            <LazyLoad height={400}>
+              <div className="media-block">
+                <img className="info-screenshot" src={require('./assets/cases/sondagsavisen/1.jpg')} alt="screenshot" />
+              </div>
+            </LazyLoad>
           </div>  
 
           <div className="info-block">
@@ -294,12 +311,13 @@ export default class extends Component {
               </ul>
             </div>
 
-            
-            <div className="media-block">
-              <img className="info-screenshot" src={require('./assets/cases/rynkeby/1.png')} alt="screenshot" />
-              <img className="info-screenshot" src={require('./assets/cases/rynkeby/2.png')} alt="screenshot" />
-              <img className="info-screenshot" src={require('./assets/cases/rynkeby/3.png')} alt="screenshot" />
-            </div>
+            <LazyLoad height={400}>
+              <div className="media-block">
+                <img className="info-screenshot" src={require('./assets/cases/rynkeby/1.jpg')} alt="screenshot" />
+                <img className="info-screenshot" src={require('./assets/cases/rynkeby/2.jpg')} alt="screenshot" />
+                <img className="info-screenshot" src={require('./assets/cases/rynkeby/3.jpg')} alt="screenshot" />
+              </div>
+            </LazyLoad>
           </div> 
 
           <div className="info-block">
@@ -320,12 +338,13 @@ export default class extends Component {
               </ul>
             </div>
 
-            
-            <div className="media-block">
-              <img className="info-screenshot" src={require('./assets/cases/partytype/1.png')} alt="screenshot" />
-              <img className="info-screenshot" src={require('./assets/cases/partytype/2.png')} alt="screenshot" />
-              <img className="info-screenshot" src={require('./assets/cases/partytype/3.png')} alt="screenshot" />
-            </div>
+            <LazyLoad height={400}>
+              <div className="media-block">
+                <img className="info-screenshot" src={require('./assets/cases/partytype/1.jpg')} alt="screenshot" />
+                <img className="info-screenshot" src={require('./assets/cases/partytype/2.jpg')} alt="screenshot" />
+                <img className="info-screenshot" src={require('./assets/cases/partytype/3.jpg')} alt="screenshot" />
+              </div>
+            </LazyLoad>
           </div> 
 
           <div className="info-block">
@@ -346,10 +365,11 @@ export default class extends Component {
               </ul>
             </div>
 
-            
-            <div className="media-block">
-              <img className="info-screenshot" src={require('./assets/cases/meethue/1.png')} alt="screenshot" />
-            </div>
+            <LazyLoad height={400}>
+              <div className="media-block">
+                <img className="info-screenshot" src={require('./assets/cases/meethue/1.jpg')} alt="screenshot" />
+              </div>
+            </LazyLoad>
           </div> 
 
           <div className="info-block">
@@ -373,11 +393,12 @@ export default class extends Component {
               </ul>
             </div>
 
-            
-            <div className="media-block">
-              <img className="info-screenshot" src={require('./assets/cases/huaweixmas/1.png')} alt="screenshot" />
-              <img className="info-screenshot" src={require('./assets/cases/huaweixmas/2.png')} alt="screenshot" />
-            </div>
+            <LazyLoad height={400}>
+              <div className="media-block">
+                <img className="info-screenshot" src={require('./assets/cases/huaweixmas/1.jpg')} alt="screenshot" />
+                <img className="info-screenshot" src={require('./assets/cases/huaweixmas/2.jpg')} alt="screenshot" />
+              </div>
+            </LazyLoad>
           </div> 
 
           <div className="info-block">
@@ -398,12 +419,13 @@ export default class extends Component {
               </ul>
             </div>
 
-            
-            <div className="media-block">
-              <img className="info-screenshot" src={require('./assets/cases/fitnessconsulting/1.png')} alt="screenshot" />
-              <img className="info-screenshot" src={require('./assets/cases/fitnessconsulting/2.png')} alt="screenshot" />
-              <img className="info-screenshot" src={require('./assets/cases/fitnessconsulting/3.png')} alt="screenshot" />
-            </div>
+            <LazyLoad height={400}>
+              <div className="media-block">
+                <img className="info-screenshot" src={require('./assets/cases/fitnessconsulting/1.jpg')} alt="screenshot" />
+                <img className="info-screenshot" src={require('./assets/cases/fitnessconsulting/2.jpg')} alt="screenshot" />
+                <img className="info-screenshot" src={require('./assets/cases/fitnessconsulting/3.jpg')} alt="screenshot" />
+              </div>
+            </LazyLoad>
           </div> 
 
         </div>

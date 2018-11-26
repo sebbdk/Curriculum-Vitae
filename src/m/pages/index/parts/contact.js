@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import LazyLoad from 'react-lazyload';
 
 import ProfileImg from './assets/profile_img.png';
 
@@ -10,7 +11,9 @@ export default class extends Component {
         <h1>Sebastian Vargr</h1>
         <small>(Formerly Kasper jensen)</small>
         <p>Developing' Developer</p>
-        <img src={ProfileImg} alt="picture of me" />
+        <LazyLoad height={300}>
+          <img src={ProfileImg} alt="picture of me" />
+        </LazyLoad>
       </div>
       <div className="contact-section">
         <h2>Contact</h2>
