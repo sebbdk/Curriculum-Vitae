@@ -19,6 +19,13 @@ module.exports = (env, argv) => {
       libraryTarget: 'umd'
     },
 
+    resolve: {
+        alias: {
+            'react': 'preact-compat',
+            'react-dom': 'preact-compat'
+        }
+    },
+
     module: {
       rules: [
         {

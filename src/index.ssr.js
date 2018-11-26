@@ -7,7 +7,7 @@ import AppTemplate from './app.template.js';
 
 if (typeof global.document !== 'undefined') {
   const path = window.location.pathname+window.location.search;
-  ReactDOM.hydrate(<App path={path} isBrowser={true}/>, document.getElementById('root'))
+  ReactDOM.render(<App path={path} isBrowser={true}/>, document.getElementById('root'))
 }
 
 export default (locals, callback) => {
