@@ -44,6 +44,7 @@ export default class extends Component {
               <ul className="skills-section">
                 <li className="v-skill"><span>Nordea</span></li>
                 <li className="v-skill"><span>Angular</span></li>
+                <li className="v-skill"><span>React</span></li>
                 <li className="v-skill"><span>Redux</span></li>
                 <li className="v-skill"><span>Frontend Architecture</span></li>
               </ul>
