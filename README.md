@@ -11,7 +11,7 @@ The commit the changes to the branch up the remote and wait a few minutes for th
 
 **Tecknical Todo**
 * Cleanup styles and naming
-* Implement simple Jest React tests
+* Implement simple Jest React testing
 
 **Content todo**
 * Add back the portfolio
@@ -22,7 +22,7 @@ The commit the changes to the branch up the remote and wait a few minutes for th
 **Performance todo**
 * Setup dependency analyses 
 * Optimise script size, currently script size is about 74.2kb
-* preact?
+* preact.
 * Avoid umd in served production js?
 * Ensure images have dimensions and color placeholders
 * Webservers should not care about gzip... use compression-webpack-plugin?

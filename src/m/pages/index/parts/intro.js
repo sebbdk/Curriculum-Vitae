@@ -15,7 +15,7 @@ Having been a freelancer for a few years i have also gotten a good understanding
 time, maintainebillity, and performance budgets to get the best posible product with availeble resources.
 
 ### What excites me
-Topics that excite me include things like serverside SPA rendering, GraphQL, state-management, game-development, 14kb performance-budgets, web-assembly, and so on.
+Topics that excite me include things like SSR SPA's, GraphQL, state-management, react/preact, game-development, 14kb performance-budgets, web-assembly, and so on.
 `;
 
 export default class extends Component {
