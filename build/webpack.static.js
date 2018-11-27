@@ -2,7 +2,7 @@
 * @Author: Kasper Sebb' brandt
 * @Date:   2018-10-31 00:18:27
 * @Last Modified by:   Kasper Sebb' brandt
-* @Last Modified time: 2018-11-26 20:48:58
+* @Last Modified time: 2018-11-27 20:10:48
 */
 const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
@@ -10,6 +10,8 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+
+const basePack = require('./webpack.base.js');
 
 module.exports = (env, argv) => { 
   return {
@@ -25,53 +27,19 @@ module.exports = (env, argv) => {
       libraryTarget: 'umd'
     },
 
-    resolve: {
-        alias: {
-            'react': 'preact-compat',
-            'react-dom': 'preact-compat'
-        }
-    },
+    resolve: basePack.resolve,
 
     module: {
       rules: [
         {
           test: /\.css$/,
           use: [
-            /*{
-              loader: MiniCssExtractPlugin.loader,
-              options: {
-                // you can specify a publicPath here
-                // by default it use publicPath in webpackOptions.output
-                publicPath: '../'
-              }
-            },*/
             "to-string-loader",
             "css-loader",
             "postcss-loader"
           ]
         },
-        {
-          enforce: "post",
-          test: /\.js$/,
-          exclude: /(node_modules)/,
-          use: {
-            loader: 'babel-loader',
-            options: {
-              presets: ['@babel/preset-env', '@babel/preset-react']
-            }
-          }
-        },
-        {
-          test: /\.(png|jpg|gif)$/i,
-          use: [
-            {
-              loader: 'url-loader',
-              options: {
-                limit: 8192
-              }
-            }
-          ]
-        }
+        ...basePack.module.rules
       ]
     },
 
@@ -85,9 +53,6 @@ module.exports = (env, argv) => {
     },
    
     plugins: [
-      /*new MiniCssExtractPlugin({
-        filename: '[name].[hash].css',
-      }),*/
       new StaticSiteGeneratorPlugin({
         paths: [
           '/',
@@ -96,11 +61,6 @@ module.exports = (env, argv) => {
         crawl: true,
         globals: {
           window: {}
-        },
-        locals: {
-          // Properties here are merged into `locals`
-          // passed to the exported render function
-          greet: 'Hello'
         }
       }),
       //new BundleAnalyzerPlugin()

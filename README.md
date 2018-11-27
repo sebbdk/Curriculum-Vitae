@@ -17,7 +17,6 @@ The commit the changes to the branch up the remote and wait a few minutes for th
 * Accessibility, Aria.
 * Implement as PWA using Workbox
 * Implement semantic tags for better indexing and assistive tecknology reasons, main, section etc.
-* Make webpack configs more DRY
 * Migrate to css-in-js
 * Make portfolio more DRY, seperate data from view.
 
