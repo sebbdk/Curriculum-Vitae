@@ -3,16 +3,14 @@ import ReactMarkdown from 'react-markdown';
 
 const aboutMe = `
 My name is Sebastian Vargr, a mostly' autodidact developer from Copenhagen, Denmark.
-I enjoy jogging, making games, building more physical things like e-boards, GPU mining rigs, 3d-printers etc. in my workshop.
+I enjoy jogging, making games, reading about machine learning and math, building more physical things like e-boards, GPU mining rigs, 3d-printers etc. in my workshop.
 
 ### What i do
-I have been developing web-applications since 2007, and have been around the stack and back.
-In short i have no problem jumping between debbuggin a legacy AngularJS app, 
-setting up new docker images, and writing/extending restful API's, 
-while juggeling the websites load metrics like, time to interactive, and kb'size budgets. 
+I have been developing web-applications since 2007, and have been around the stack and back,
+so do not mind going outside my specific role to get the work done, an can do so confidently when i need to.
 
-Having been a freelancer for a few years i have also gotten a good understanding of balancing 
-time, maintainebillity, and performance budgets to get the best posible product with availeble resources.
+I consider my self a highly independant problem solver with a fondness for finding simple solutions to difficult problems
+and planning ahead to meet project goals and deadlines.
 
 ### What excites me
 Topics that excite me include things like SSR SPA's, GraphQL, state-management, React/Preact (what this page is build on), game-development, 14kb performance-budgets, web-assembly, and so on.

@@ -14,17 +14,22 @@ The commit the changes to the branch up the remote and wait a few minutes for th
 **Tecknical Todo**
 * Cleanup styles and naming to use BEM or Tachyon'ish pattern.
 * Implement simple Jest React testing
+* Accessibility, Aria.
+* Implement as PWA using Workbox
+* Implement semantic tags for better indexing and assistive tecknology reasons, main, section etc.
+* Migrate to css-in-js
+* Make portfolio more DRY, seperate data from view.
 
 **Content todo**
 * Improve on print design
 
 **Performance todo**
 * Setup dependency analyses 
-* Optimise script size - preact + preact-compat
-* Migrate to css-in-js
-* Ensure images have dimensions and color placeholders
-* Implement semantic tags for better indexing and assistive tecknology reasons, main, section etc.
-* Implement as PWA using Workbox
+* Optimise script size
+  * Router optimization - only include 1 router type in prod
+  * LazyLoad plugin seemed big
+* Markdown parsing is heavy (~13kb gzipped), could be pre'rendered and not included in production build
+* Portfolio is big and not very DRY.
 
 # Other notes
 Initial payload (html+css) budget kb size is max 14 kb.

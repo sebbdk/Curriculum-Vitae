@@ -2,7 +2,7 @@
 * @Author: Kasper Sebb' brandt
 * @Date:   2018-10-31 00:18:45
 * @Last Modified by:   Kasper Sebb' brandt
-* @Last Modified time: 2018-11-26 20:49:10
+* @Last Modified time: 2018-11-27 20:11:08
 */
 const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
@@ -11,7 +11,9 @@ const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin'
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const InterpolateHtmlPlugin = require('react-dev-utils/InterpolateHtmlPlugin');;
+const InterpolateHtmlPlugin = require('react-dev-utils/InterpolateHtmlPlugin');
+
+const basePack = require('./webpack.base.js');
 
 module.exports = (env, argv) => { 
   return {
@@ -23,12 +25,7 @@ module.exports = (env, argv) => {
     },
     mode: 'development',
 
-    resolve: {
-        alias: {
-            'react': 'preact-compat',
-            'react-dom': 'preact-compat'
-        }
-    },
+    resolve: basePack.resolve,
     
     module: {
       rules: [
@@ -46,40 +43,12 @@ module.exports = (env, argv) => {
             "css-loader"
           ]
         },
-        {
-          enforce: "post",
-          test: /\.js$/,
-          exclude: /(node_modules)/,
-          use: {
-            loader: 'babel-loader',
-            options: {
-              presets: ['@babel/preset-env', '@babel/preset-react']
-            }
-          }
-        },
-        {
-          test: /\.(png|jpg|gif)$/i,
-          use: [
-            {
-              loader: 'url-loader',
-              options: {
-                limit: 8192
-              }
-            }
-          ]
-        }
+        ...basePack.module.rules
       ]
     },
    
     plugins: [
       new MiniCssExtractPlugin(),
-      // Makes some environment variables available in index.html.
-      // The public URL is available as %PUBLIC_URL% in index.html, e.g.:
-      // <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
-      // In production, it will be an empty string unless you specify "homepage"
-      // in `package.json`, in which case it will be the pathname of that URL.
-      //new InterpolateHtmlPlugin(env.raw),
-      // Generates an `index.html` file with the <script> injected.
       new HtmlWebpackPlugin({
         inject: true,
         template: 'src/dev.index.html',
