@@ -13,7 +13,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 const basePack = require('./webpack.base.js');
 
-module.exports = (env, argv) => { 
+module.exports = (env, argv) => {
   return {
     entry: './src/index.ssr.js',
     devtool: 'source-map',
@@ -51,7 +51,7 @@ module.exports = (env, argv) => {
         new OptimizeCssAssetsPlugin()
       ]
     },
-   
+
     plugins: [
       new StaticSiteGeneratorPlugin({
         paths: [
