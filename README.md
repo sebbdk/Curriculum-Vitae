@@ -4,6 +4,9 @@ Curriculum-Vitae
 My Curriculum Vitae or resumé if you like.
 Serves as my data sheet, and as a subject/experiment for needless amounts of load optimization. :)
 
+## Update history
+ - 21/03/09 Migrated build system to Parcel
+
 ## How to release
 After having done changes to master.
 Switch to `gh-pages` branch merge master in and run `yarn ghpages`.
