@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "build": "parcel build src/index.html",
+    "build": "parcel build src/index.html --public-url .",
     "ghpages": "yarn build && mv dist/* ./",
     "clean": "rm -rf dist",
     "dev": "parcel src/index.html",
