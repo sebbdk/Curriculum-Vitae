@@ -5,8 +5,12 @@
 * @Last Modified time: 2018-11-01 20:47:10
 */
 
+console.log('!!')
+
+/*
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./app";
 
 ReactDOM.render(<App />, document.getElementById("root"));
+*/
