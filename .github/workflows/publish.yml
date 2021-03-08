@@ -1,8 +1,8 @@
 name: Publish
 
-on: push
-  branches:
-    - master  # Set a branch name to trigger deployment
+on:
+  push:
+    branches: [ master ]
 
 jobs:
   deploy:
