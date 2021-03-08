@@ -6,6 +6,18 @@ export default class extends Component {
     return <div>
       <h2 className="section-title">Experience</h2>
       <div className="experience-section">
+      <div className="v-col-12">
+          <div className="info-block">
+            <b>Frontend Tech/Team-lead</b><br />
+            <small>Feb 2019 - Current</small>
+            <p>
+              I joined SimpleSite in the middle of a growth spurt as a Senior developer,
+              so i had the privilidge of helping to implement Scrum practices, training/mentoring junior/intermediate developers,
+              designing & implementing deployment and automated testing strategies, and then ofc. upgrading performance, migrating and developing new features.
+            </p>              
+          </div>
+        </div>
+
         <div className="v-col-12">
           <div className="info-block">
             <b>Senior frontend consultant at Saxobank</b><br />
